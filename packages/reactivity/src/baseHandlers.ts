@@ -1,6 +1,6 @@
 import { isObject } from 'shared'
 import { track } from './effect'
-import { reactive, readonly, readonlyMap, shallowReadonlyMap } from './reactive'
+import { ReactiveFlags, reactive, reactiveMap, readonly, readonlyMap, shallowReadonlyMap } from './reactive'
 
 const get = createGetter()
 const set = createSetter()
@@ -9,6 +9,24 @@ const shallowReadonlyGet = createGetter(true, true)
 
 function createGetter(isReadonly = false, isShallow = false) {
   return function get(target, key, receiver) {
+    const isExistInReactiveMap = () =>
+      key === ReactiveFlags.RAW && receiver === reactiveMap.get(target)
+
+    const isExistInReadonlyMap = () =>
+      key === ReactiveFlags.RAW && receiver === readonlyMap.get(target)
+
+    const isExistInShallowReadonlyMap = () =>
+      key === ReactiveFlags.RAW && receiver === shallowReadonlyMap.get(target)
+
+    if (key === ReactiveFlags.IS_REACTIVE)
+      return !isReadonly
+
+    else if (key === ReactiveFlags.IS_READONLY)
+      return isReadonly
+
+    else if (isExistInReactiveMap() || isExistInReadonlyMap() || isExistInShallowReadonlyMap())
+      return target
+
     const res = Reflect.get(target, key, receiver)
 
     // 如果不是readonly才收集依赖
