@@ -1,22 +1,33 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+    "sourceMap": false,
     "target": "es2016",
+    "useDefineForClassFields": false,
     "module": "esnext",
-    "noImplicitAny": false,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "downlevelIteration": true,
-    "lib": [
-      "es6",
-      "DOM"
-    ]
+    "moduleResolution": "node",
+    "allowJs": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "jsx": "preserve",
+    "lib": ["esnext", "dom"],
+    "types": [
+      "node"
+    ],
+    "rootDir": ".",
+    "paths": {
+
+    }
   },
   "include": [
-    "src/index.ts",
-    "src/global.d.ts"
+    "packages/global.d.ts",
+    "packages/*/src",
+    "packages/runtime-dom/types/jsx.d.ts",
+    "packages/*/__tests__",
   ]
 }

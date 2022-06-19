@@ -1,6 +1,7 @@
 {
   "name": "mini-vue",
   "version": "1.0.0",
+  "packageManager": "pnpm@7.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +18,13 @@
     "url": "https://github.com/laihaojie/mini-vue/issues"
   },
   "homepage": "https://github.com/laihaojie/mini-vue#readme",
-  "dependencies": {
-    "typescript": "^4.6.4"
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@antfu/eslint-config": "^0.25.1",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.17.0",
+    "typescript": "^4.6.4",
+    "vitest": "^0.15.1"
   }
 }

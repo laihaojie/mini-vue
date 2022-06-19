@@ -1,0 +1,12 @@
+{
+    "name": "reactivity",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+  

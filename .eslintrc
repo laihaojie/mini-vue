@@ -1,0 +1,50 @@
+{
+  "extends": ["@antfu"],
+  "rules": {
+    "no-console": "off",
+    "react/display-name": "off",
+    "vue/first-attribute-linebreak": [
+      "error",
+      {
+        "singleline": "ignore",
+        "multiline": "ignore"
+      }
+    ],
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "never"
+      }
+    ],
+    "react/prop-types": [
+      "off"
+    ],
+    "vue/html-indent": ["error", 2, {
+      "attribute": 1,
+      "baseIndent": 1,
+      "closeBracket": 0,
+      "alignAttributesVertically": false,
+      "ignores": []
+    }],
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-expect-error": false,
+        "ts-ignore": false
+      }
+    ],
+    "no-unused-expressions": ["error", {
+      "allowTernary": true,
+      "allowShortCircuit": true,
+      "enforceForJSX": true,
+      "allowTaggedTemplates": true
+    }],
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/indent": ["error", 2],
+    "react/no-unknown-property": ["off"],
+    "no-global-assign": ["off"],
+    "@typescript-eslint/no-this-alias": ["off"],
+    "no-sequences": "off"
+  }
+}
