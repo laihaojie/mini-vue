@@ -9,6 +9,7 @@
     "moduleResolution": "node",
     "allowJs": false,
     "strict": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
@@ -25,7 +26,7 @@
     }
   },
   "include": [
-    "packages/global.d.ts",
+    "global.d.ts",
     "packages/*/src",
     "packages/runtime-dom/types/jsx.d.ts",
     "packages/*/__tests__",
