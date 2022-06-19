@@ -1,4 +1,5 @@
 import { isObject } from 'shared'
+import { track } from './effect'
 import { reactive, readonly, readonlyMap, shallowReadonlyMap } from './reactive'
 
 const get = createGetter()
