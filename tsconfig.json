@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "outDir": "dist",
+    "rootDir": ".",
+    "baseUrl": ".",
     "sourceMap": false,
     "target": "es2016",
     "useDefineForClassFields": false,
@@ -20,15 +21,11 @@
     "types": [
       "node"
     ],
-    "rootDir": ".",
     "paths": {
-
+      "shared": [
+        "./packages/shared/index.ts"
+      ]
     }
   },
-  "include": [
-    "global.d.ts",
-    "packages/*/src",
-    "packages/runtime-dom/types/jsx.d.ts",
-    "packages/*/__tests__",
-  ]
+  "exclude": ["dist"]
 }

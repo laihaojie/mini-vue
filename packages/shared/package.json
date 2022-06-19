@@ -1,5 +1,5 @@
 {
-  "name": "reactivity",
+  "name": "shared",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "dependencies": {
-    "shared": "workspace:*"
-  },
   "license": "ISC"
 }
